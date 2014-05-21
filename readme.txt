@@ -13,7 +13,7 @@ Functionality included-
 
 Installation instructions-
 Install Nodejs expressjs and mongodb
-Run the sample data population script (included in productlist.txt) through mongo shell
+Run the sample data population script (included in populate_script.txt) through mongo shell
 Copy ecommercecatalog folder into nodejs parent folder
 Use command line and navigate to ecommercecatalog folder and execute npm start command
 Open a browser and type localhost:3000/productlist
