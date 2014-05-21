@@ -1,0 +1,99 @@
+body {
+  padding:0px;
+}
+
+font
+{
+	size:14px;	
+	font-family: "Verdana";
+}
+
+a {
+  color:#0000FF;
+}
+
+table.table1
+{
+	border:0px solid red;
+	table-layout: auto;
+	border-spacing: 10px;
+	width:100%;
+	column-count: 2;
+}
+table.table1 tr
+{
+	height:100px;
+}
+table.table1 th
+{
+	height:100%;
+}
+table.table1 td:first-child
+{
+	width: 15%;
+	font-family:Tahoma; 
+	font-size:14px;
+	color:#000000;
+}
+table.table1 td:last-child
+{
+	width: 85%;
+	font-family:Tahoma; 
+	font-size:14px;
+	color:#000000;
+}
+
+table.table2
+{
+	border:0px solid red;
+	table-layout: auto;
+	border-spacing: 10px;
+	width:100%;
+	column-count: 4;
+}
+table.table2 tr
+{
+	height:75px;
+}
+table.table2 th
+{
+	width: 25%;
+	height: 75px;
+}
+table.table2 td:first-child
+{
+	width: 25%;
+	border: 1px solid grey;
+	font-family:Tahoma; 
+	font-size:14px;
+	color:#000000;
+}
+table.table2 td:last-child
+{
+	width: 25%;
+	border: 1px solid grey;
+	font-family:Tahoma; 
+	font-size:14px;
+	color:#000000;
+}
+table.table2 td
+{
+	width: 25%;
+	padding: 10px;
+	border: 1px solid grey;
+	font-family:Tahoma; 
+	font-size:14px;
+	color:#000000;
+}
+
+table.table3
+{
+	border:0px solid red;
+	table-layout: auto;
+	border-spacing: 0px;
+	width:100%;
+}
+table.table3 tr
+{
+	height: 10px
+}

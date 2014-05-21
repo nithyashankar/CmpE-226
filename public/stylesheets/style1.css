@@ -1,0 +1,50 @@
+body {
+  padding: 0px;
+}
+
+font
+{
+	size: 14px;	
+	font-family: "Verdana";
+}
+a {
+  color: #00B7FF;
+}
+
+table,td,th
+{
+	border:0px solid red;
+}
+table
+{
+	width:100%;
+}
+th
+{
+height:100%;
+}
+
+tr
+{
+	height:100%;
+}
+td.column_1
+{
+	width: 20%;
+}
+td.column_2
+{
+	width:20%;
+}
+td.column_3
+{
+	width:20%;
+}
+td.column_4
+{
+	width:20%;
+}
+td.column_5
+{
+	width:20%;
+}

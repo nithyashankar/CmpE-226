@@ -1,0 +1,241 @@
+extends layout2
+
+block content
+	<form name="searchBar" action="/search">
+	table(class="table3" bgcolor="#000000")
+		tr
+			td(style="text-align: left")
+				<center><img src="/logo.png" "width=120" height="90"><font color="#FFFFFF" font-family="Tahoma" size="4"><i>BuyHere!</i><bold></font></center>
+			td(style="text-align: right")
+				<font color="#FFFFFF" size="2">Select Category: </font>
+				<select name="selectedCategory">
+				<option value="All">All</option>
+				<option value="Books">Books</option>
+				<option value="Movies-DVDs">Movies-DVDs</option>
+				<option value="Music-CDs">Music-CDs</option>
+				<option value="Refridgerator">Refridgerator</option>
+				<option value="Television">Television</option>
+				<option value="Microwave">Microwave</option>
+				<option value="Audio Systems">Audio Systems</option>
+				<option value="Shoes">Shoes</option>
+				<option value="Bags">Bags</option>
+				<option value="Diapers">Diapers</option>
+				</select>
+				<br>
+				<font color="#FFFFFF" size="2">Filter Rating <i>(optional)</i>: </font>
+				<input type="radio" name="rating" value="1star"><font color="#FFFFFF" size="1">1</font>
+				<input type="radio" name="rating" value="2star"><font color="#FFFFFF" size="1">2</font>
+				<input type="radio" name="rating" value="3star"><font color="#FFFFFF" size="1">3</font>
+				<input type="radio" name="rating" value="4star"><font color="#FFFFFF" size="1">4</font>
+				<input type="radio" name="rating" value="5star"><font color="#FFFFFF" size="1">5</font>
+				<input type="radio" name="rating" value="" checked="true"><font color="#FFFFFF" size="1">All</font>
+				<br>
+				<font color="#FFFFFF" size="2">Enter Search Text: </font>
+				<input type="text" name="searchText" size="32" maxlength="32">
+				<input type="submit" value="GO">
+				</form>
+	table(class="table3")
+		tr
+			td(colspan=2 bgcolor="FFFFFF")<marquee><font color=red font-family=tahoma size="2"><b><i>Try Our Featured Products Below!</i></b></font></marquee>
+	table(class="table1")
+		tr
+			td(bgcolor="#3333FF")
+				<b><center><FONT color=white size=4>REFRIDGERATORS</FONT></center></b>
+			td
+				table(class="table2")
+					tr
+						each product, i in productlist
+							if product.category == 'Refridgerator'
+								td
+									<center>
+									<a href=/productdetails?id=
+									=product._id
+									><p>
+									=product.name
+									</a><br>
+									=product.brand
+									<br><b>
+									=product.price			
+									</b>
+									</center>
+		tr
+			td(bgcolor="#3333FF")
+				<b><center><FONT color=white size=4>MICROWAVES</FONT></center></b>
+			td
+				table(class="table2")
+					tr
+						each product, i in productlist
+							if product.category == 'Microwave'
+								td
+									<center>
+									<a href=/productdetails?id=
+									=product._id
+									><p>
+									=product.name
+									</a><br>
+									=product.brand
+									<br><b>
+									=product.price
+									</b></center>
+		tr
+			td(bgcolor="#3333FF")
+				<b><center><FONT color=white size=4>BOOKS</FONT></center></b>
+			td
+				table(class="table2")
+					tr
+						each product, i in productlist
+							if product.category == 'Books'
+								td
+									<center>
+									<a href=/productdetails?id=
+									=product._id
+									><p>
+									=product.name
+									</a><br>
+									=product.publisher
+									<br><b>
+									=product.price
+									</b></center>
+		tr
+			td(bgcolor="#3333FF")
+				<b><center><FONT color=white size=4>DIAPERS</FONT></center></b>
+			td
+				table(class="table2")
+					tr
+						each product, i in productlist
+							if product.category == 'Diapers'
+								td
+									<center>
+									<a href=/productdetails?id=
+									=product._id
+									><p>
+									=product.name
+									</a><br>
+									=product.style
+									</a><br>									
+									=product.brand
+									<br><b>
+									=product.price
+									</b></center>									
+		tr
+			td(bgcolor="#3333FF")
+				<b><center><FONT color=white size=4>MOVIE-DVDs</FONT></center></b>
+			td
+				table(class="table2")
+					tr
+						each product, i in productlist
+							if product.category == 'Movie-DVDs'
+								td
+									<center>
+									<a href=/productdetails?id=
+									=product._id
+									><p>
+									=product.name
+									</a><br>
+									=product.year
+									<br><b>
+									=product.price
+									</b></center>									
+		tr
+			td(bgcolor="#3333FF")
+				<b><center><FONT color=white size=4>MUSIC-CDs</FONT></center></b>
+			td
+				table(class="table2")
+					tr
+						each product, i in productlist
+							if product.category == 'Music-CDs'
+								td
+									<center>
+									<a href=/productdetails?id=
+									=product._id
+									><p>
+									=product.name
+									</a><br>
+									=product.singer
+									<br><b>
+									=product.price
+									</b></center>									
+		tr
+			td(bgcolor="#3333FF")
+				<b><center><FONT color=white size=4>BAGS</FONT></center></b>
+			td
+				table(class="table2")
+					tr
+						each product, i in productlist
+							if product.category == 'Bags'
+								td
+									<center>
+									<a href=/productdetails?id=
+									=product._id
+									><p>
+									=product.name
+									</a><br>
+									=product.style
+									</a><br>
+									=product.publisher
+									<br><b>
+									=product.make
+									</b></center>									
+		tr
+			td(bgcolor="#3333FF")
+				<b><center><FONT color=white size=4>SHOES</FONT></center></b>
+			td
+				table(class="table2")
+					tr
+						each product, i in productlist
+							if product.category == 'Shoes'
+								td
+									<center>
+									<a href=/productdetails?id=
+									=product._id
+									><p>
+									=product.gender
+									</a><br>
+									=product.name
+									</a><br>
+									=product.brand
+									<br><b>
+									=product.price
+									</b></center>									
+		tr
+			td(bgcolor="#3333FF")
+				<b><center><FONT color=white size=4>TELEVISIONS</FONT></center></b>
+			td
+				table(class="table2")
+					tr
+						each product, i in productlist
+							if product.category == 'Television'
+								td
+									<center>
+									<a href=/productdetails?id=
+									=product._id
+									><p>
+									=product.name
+									</a><br>
+									=product.type
+									</a><br>
+									=product.brand
+									<br><b>
+									=product.price
+									</b></center>									
+		tr
+			td(bgcolor="#3333FF")
+				<b><center><FONT color=white size=4>AUDIO SYSTEMS</FONT></center></b>
+			td
+				table(class="table2")
+					tr
+						each product, i in productlist
+							if product.category == 'Audio Systems'
+								td
+									<center>
+									<a href=/productdetails?id=
+									=product._id
+									><p>
+									=product.name
+									</a><br>
+									=product.type
+									<br><b>
+									=product.brand
+									<br><b>									
+									=product.price
+									</b></center>																		
